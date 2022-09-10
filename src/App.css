@@ -1,38 +1,281 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  background: linear-gradient(
+    to right top,
+    #d200ff,
+    #a940ff,
+    #7f55ff,
+    #5261f8,
+    #1267eb
+  );
+}
+
+.routes {
+  width: 60%;
+  border-radius: 10px;
+  padding: 4rem 0;
+  margin: auto;
+  background-color: rgb(216, 216, 216);
+}
+
+.header {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 2rem;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, yellow, lightgreen);
+  background-clip: text;
+  color: transparent;
+  transition: all 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.title:hover {
+  background: linear-gradient(to right, lightgreen, yellow);
+  background-clip: text;
+  color: transparent;
+}
+
+.navLinks {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 2rem;
+  color: white;
+  text-decoration: underline;
+}
+
+.links {
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.links:hover {
+  color: rgb(0, 0, 0);
+}
+
+.images {
+  display: flex;
+  justify-content: space-around;
+}
+
+.homeImage {
+  width: 20%;
+  border-radius: 10px;
+  transform: rotate(135deg);
+}
+
+.homeInfo {
+  padding-top: 4rem;
+  width: 70%;
+  text-align: justify;
+  margin: auto;
+  font-size: 1.4rem;
+}
+
+.linksInfo {
+  text-align: center;
+  color: rgba(1, 73, 151, 0.802);
+  padding-top: 1.2rem;
+}
+
+.section,
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.section h2 {
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.form input {
+  width: 120%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-radius: 10px;
+}
+
+.form button,
+.section button {
+  padding: 0.5rem 1.8rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-right: 1.2rem;
+}
+
+.form button:hover,
+.section button:hover {
+  background-color: black;
+  color: white;
+}
+
+.result {
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.container ul {
+  list-style: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.container p {
+  padding-bottom: 0.2rem;
+}
+
+.container input,
+.container label {
+  padding-right: 1rem;
+}
+
+.btn-submit {
+  margin-top: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.social-icons i {
+  color: black;
+}
+
+.footer {
+  font-size: 1.2rem;
+}
+
+.responsiveFooter {
+  display: none;
+}
+
+.container .options {
+  display: inline;
+}
+
+@media (max-width: 1370px) {
+  .section h2 {
+    padding: 0 2rem 1rem 2rem;
+    text-align: center;
   }
-  to {
-    transform: rotate(360deg);
+  .routes {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1050px) {
+  .homeInfo {
+    width: 90%;
+    text-align: justify;
+  }
+}
+
+@media (max-width: 930px) {
+  .header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .title {
+    text-align: center;
+  }
+  .homeInfo {
+    margin: auto;
+  }
+  .section h2 {
+    padding: 0 2rem 1rem 2rem;
+    text-align: center;
+  }
+  .container {
+    padding: 0 3rem;
+  }
+  .container .options {
+    display: block;
+    padding: 0.5rem 0;
+  }
+}
+
+@media (max-width: 750px) {
+  .section h3 {
+    text-align: center;
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .navLinks {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media (max-width: 485px) {
+  .footer {
+    display: none;
+  }
+  .responsiveFooter {
+    display: block;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+  .container li {
+    font-size: 1rem;
+  }
+  .routes {
+    padding: 2rem 0;
+  }
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 2rem;
+  }
+  .homeInfo {
+    font-size: 1.2rem;
+  }
+  .section h2 {
+    font-size: 1.8rem;
+  }
+  .form input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .form input {
+    width: 90%;
+  }
+  .section button {
+    margin-right: 0.8rem;
+  }
+  .result {
+    text-align: center;
+    font-size: 1.2rem;
   }
 }
