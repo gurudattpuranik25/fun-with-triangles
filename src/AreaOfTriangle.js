@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 function AreaOfTriangle() {
   const calculateArea = (base, height) => {
-    const b = parseInt(base);
-    const h = parseInt(height);
+    const b = parseFloat(base);
+    const h = parseFloat(height);
     if (base === "" || height === "") setresult("All fields are mandatory");
     else {
       if (base <= 0 || height <= 0)
@@ -12,7 +12,7 @@ function AreaOfTriangle() {
         );
       else {
         const area = 0.5 * b * h;
-        setresult(`Area of tringle is ${area}`);
+        setresult(`Area of tringle is ${area.toFixed(2)}`);
       }
     }
   };

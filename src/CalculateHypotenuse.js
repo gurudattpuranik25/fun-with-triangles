@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 function CalculateHypotenuse() {
   const claculateHypotenuse = (firstSide, secondSide) => {
-    const side1 = parseInt(firstSide);
-    const side2 = parseInt(secondSide);
+    const side1 = parseFloat(firstSide);
+    const side2 = parseFloat(secondSide);
     if (firstSide === "" || secondSide === "")
       setresult("All fields are mandatory");
     else {
@@ -13,7 +13,9 @@ function CalculateHypotenuse() {
         );
       else {
         const hypotenuse = Math.sqrt(side1 * side1 + side2 * side2);
-        setresult(`Hypotenuse for the corresponding lengths is ${hypotenuse}`);
+        setresult(
+          `Hypotenuse for the corresponding lengths is ${hypotenuse.toFixed(2)}`
+        );
       }
     }
   };
