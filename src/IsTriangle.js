@@ -14,7 +14,7 @@ function IsTriangle() {
     if (angle1 === "" || angle2 === "" || angle3 === "")
       setResult("Enter all the fields ⛔");
     else {
-      if (angle1 == 0 || angle2 == 0 || angle3 == 0)
+      if (angle1 === "0" || angle2 === "0" || angle3 === "0")
         setResult("Angles cannot be zero.");
       else {
         if (angle1 < 0 || angle2 < 0 || angle3 < 0)
